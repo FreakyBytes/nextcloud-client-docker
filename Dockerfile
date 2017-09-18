@@ -14,7 +14,7 @@ ENV NC_USER=username \
 
 
 # create group and user
-RUN groupadd --gid $USER_GID $USER && useradd --uid $USER_UID --gid $USER_GID -m $USER
+RUN addgroup -g $USER_GID $USER && adduser -G $USER -D -u $USER_UID $USER
 
 # update repositories and install nextcloud-client
 RUN apk update && apk add nextcloud-client
