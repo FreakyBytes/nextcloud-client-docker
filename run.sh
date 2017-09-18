@@ -4,4 +4,4 @@
 [ -d $NC_SYNC_DIR ] || mkdir -p $NC_SYNC_DIR
 chown $USER:$USER $NC_SYNC_DIR
 
-su $USER -c nextcloudcmd $( [ $NC_SILENT == true ] && echo "--silent" ) $( [ $NC_TRUST_CERT == true ] && echo "--trust" ) --non-interactive -u $NC_USER -p $NC_PASS $NC_SOURCE_DIR $NC_URL
+su $USER -c 'nextcloudcmd $( [ $NC_SILENT == true ] && echo "--silent" ) $( [ $NC_TRUST_CERT == true ] && echo "--trust" ) --non-interactive -u $NC_USER -p $NC_PASS $NC_SOURCE_DIR $NC_URL'
