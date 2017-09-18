@@ -22,5 +22,4 @@ RUN apk update && apk add nextcloud-client
 # add run script
 ADD run.sh /usr/bin/run.sh
 
-USER $USER
 CMD /usr/bin/run.sh
