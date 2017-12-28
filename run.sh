@@ -1,5 +1,8 @@
 #!/bin/ash
 
+# check if the sync user exists
+id -u $USER || adduser -D -H $USER
+
 # ensure, that the sync dir exists and is owned by the user
 [ -d $NC_SYNC_DIR ] || mkdir -p $NC_SYNC_DIR
 chown $USER:$USER $NC_SOURCE_DIR
