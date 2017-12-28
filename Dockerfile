@@ -5,7 +5,10 @@ ARG USER=ncsync
 ARG USER_UID=1000
 ARG USER_GID=1000
 
-ENV NC_USER=username \
+ENV USER=$USER \
+    USER_UID=$USER_UID \
+    USER_GID=$USER_GID \
+    NC_USER=username \
     NC_PASS=password \
     NC_URL="" \
     NC_TRUST_CERT=false \
